@@ -11,6 +11,12 @@ pipeline {
 				sh "ls -rtl"
 			}
 		}
+
+		stage("test") {
+			steps {
+				echo "Testing super code"
+			}
+		}
 	}
 
 }
