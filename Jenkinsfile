@@ -17,6 +17,12 @@ pipeline {
 				echo "Testing super code"
 			}
 		}
+
+		stage("deploy") {
+			steps {
+				echo "Deploying my super app"
+			}
+		}
 	}
 
 }
