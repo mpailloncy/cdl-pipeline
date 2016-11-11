@@ -1,3 +1,16 @@
 #!/usr/bin/env groovy
 
-echo "Heyyy !"
+pipeline {
+	
+	agent any
+
+	stages {
+		stage("build") {
+			steps {
+				echo "Building my super project"
+				sh "ls -rtl"
+			}
+		}
+	}
+
+}
