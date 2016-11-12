@@ -8,7 +8,12 @@ pipeline {
 		stage("build") {
 			steps {
 				echo "Building my super project"
-				sh "ls -rtl"
+				script {
+				    for(int i=0; i < 9; i++) {
+				        sleep 10
+				        echo "Building step ${i}"
+				    }
+				}
 			}
 		}
 
@@ -26,3 +31,4 @@ pipeline {
 	}
 
 }
+
