@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+@Library("mysharedlib")
 
 pipeline {
 	
@@ -10,6 +11,7 @@ pipeline {
 				script {
 					echo "Building my super project"
 				    for(int i=0; i < 9; i++) {
+						hellow "Jackyyy"
 				        sleep 2 
 				        echo "Building step ${i}"
 				    }
