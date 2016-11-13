@@ -10,7 +10,7 @@ pipeline {
 				script {
 					echo "Building my super project"
 				    for(int i=0; i < 9; i++) {
-				        sleep 5 
+				        sleep 2 
 				        echo "Building step ${i}"
 				    }
 				}
