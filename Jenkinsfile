@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-@Library("mysharedlib")
+@Library("mysharedlib") _
 
 stage("build") {
 	echo "Building my super project"
