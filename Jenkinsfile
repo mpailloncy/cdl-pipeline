@@ -1,36 +1,21 @@
 #!/usr/bin/env groovy
+
 @Library("mysharedlib")
 
-pipeline {
-	
-	agent any
+stage("build") {
+	echo "Building my super project"
+    for(int i=0; i < 9; i++) {
+		hellow "Jackyyy"
+        sleep 2 
+        echo "Building step ${i}"
+    }
+}
 
-	stages {
-		stage("build") {
-			steps {
-				script {
-					echo "Building my super project"
-				    for(int i=0; i < 9; i++) {
-						hellow "Jackyyy"
-				        sleep 2 
-				        echo "Building step ${i}"
-				    }
-				}
-			}
-		}
+stage("test") {
+	echo "Testing super code"
+}
 
-		stage("test") {
-			steps {
-				echo "Testing super code"
-			}
-		}
-
-		stage("deploy") {
-			steps {
-				echo "Deploying my super app"
-			}
-		}
-	}
-
+stage("deploy") {
+	echo "Deploying my super app"
 }
 
