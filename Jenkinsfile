@@ -7,10 +7,10 @@ pipeline {
 	stages {
 		stage("build") {
 			steps {
-				echo "Building my super project"
 				script {
+					echo "Building my super project"
 				    for(int i=0; i < 9; i++) {
-				        sleep 10
+				        sleep 5 
 				        echo "Building step ${i}"
 				    }
 				}
